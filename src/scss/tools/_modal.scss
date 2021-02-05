@@ -1,0 +1,114 @@
+.loading-overlay {
+  align-items: center;
+  background-color: var(--bg-dark-alpha);
+  display: flex;
+  font-size: 1.2rem;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.modal {
+  background: var(--grey-light);
+  border: solid 1px var(--bg-light);
+  border-radius: 5px;
+  box-shadow: 0 0 1rem var(--primary);
+  margin: 1rem;
+  max-width: 66rem;
+  min-width: 20%;
+  position: relative;
+  text-align: justify;
+  z-index: 800;
+
+  .header {
+    align-items: center;
+    background: var(--grey-dark);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    height: 6rem;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+
+    p {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    h1 {
+      i {
+        margin-left: 1rem;
+
+        &.male {
+          color: var(--blue);
+        }
+
+        &.female {
+          color: var(--pink);
+        }
+      }
+    }
+
+    .close {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 5px;
+
+      transition: color .2s ease-out;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--secondary);
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    height: calc(100% - 12rem);
+    justify-content: center;
+    padding: 2rem;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 20rem;
+
+      label {
+        font-style: italic;
+        margin-left: 2rem;
+      }
+
+      input {
+        margin: 0 2rem;
+      }
+    }
+  }
+
+  .footer {
+    align-items: center;
+    background: var(--grey-dark);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; 
+    display: flex;
+    height: 6rem;
+    justify-content: center;
+
+    button {
+      border: solid 1px var(--grey-alpha);
+      border-radius: 5px;
+      cursor: pointer;
+      height: 70%;
+      outline: none;
+      padding: 1rem 2rem;
+      text-decoration : none;
+    }
+  }
+}
