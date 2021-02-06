@@ -48,6 +48,10 @@ class FreelanceTemplate {
 
   _newQuotation() {
     const informationRetrieved = info => {
+      const saveImg = document.createElement('IMG');
+      saveImg.src = 'assets/img/save.svg';
+      document.querySelector('#view-controls').appendChild(saveImg);
+
       this.get('assets/html/QuotationTemplate.html').then(template => {
         const parser = new DOMParser();
         const dom = parser.parseFromString(template, 'text/html');
