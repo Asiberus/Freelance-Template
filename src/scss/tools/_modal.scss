@@ -1,3 +1,13 @@
+@keyframes rotatePlane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
 .loading-overlay {
   align-items: center;
   background-color: var(--bg-dark-alpha);
@@ -10,6 +20,29 @@
   top: 0;
   width: 100%;
   z-index: 999;
+
+  &::before {
+    content: '';
+    background-color: var(--primary);
+    height: 4rem;
+    left: calc(50% - 2rem);
+    position: absolute;
+    top: 50%;
+    width: 4rem;
+    border-radius: 15%;
+    animation: rotatePlane 1.2s infinite ease-in-out;
+  }
+
+  &::after {
+    content: 'Veuilez patienter pendant l\'opération';
+    color: var(--white);
+    font-style: italic;
+    left: 0;
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+  }
 }
 
 .modal {

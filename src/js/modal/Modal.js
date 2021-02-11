@@ -1,3 +1,6 @@
+import { get } from '../tools/Utils';
+
+
 class Modal {
 
 
@@ -24,7 +27,7 @@ class Modal {
 
 
   _loadTemplate() {
-    window.FreelanceTemplate.get(this._url).then(template => {
+    get(this._url).then(template => {
       this._rootElement = this._parseHTMLFragment(template);
       // Create overlay modal container
       this._modalOverlay = document.createElement('DIV');

@@ -15,18 +15,13 @@
     <h4 id="hello-freelancer">Bonjour!</h4>
   </div>
   <ul>
-    <li id="new-quotation">Nouveau Devis</li>
-    <li>Nouvelle Facture</li>
-    <li>Nouveau Contrat</li>
+    <li>Devis<span id="new-quotation"class="entry">+</span><span id="quotation-count"class="entry">0</span></li>
+    <li>Facture<span class="entry">+</span><span class="entry">0</span></li>
+    <li>Contrat<span class="entry">+</span><span class="entry">0</span></li>
   </ul>
   <ul>
-    <li>Devis sauvegardés<span class="count">0</span></li>
-    <li>Facture sauvegardés<span class="count">0</span></li>
-    <li>Contrat sauvegardés<span class="count">0</span></li>
-  </ul>
-  <ul>
-    <li>Carnet de client<span class="count">0</span></li>
-    <li>Carnet de fournisseurs<span class="count">0</span></li>
+    <li>Carnet de client<span class="entry">+</span><span class="entry">0</span></li>
+    <li>Carnet de fournisseurs<span class="entry">+</span><span class="entry">0</span></li>
   </ul>
   <ul>
     <li>Comptabilité</li>
@@ -39,10 +34,11 @@
   </header>
   <section id="section-content"></section>
 </main>
+<script type="text/javascript" src="assets/lib/html2canvas.min.js"></script>
 <script type="text/javascript" src="assets/dist/freelancetemplate.bundle.js"></script>
 <script type="text/javascript">
-  window.FreelanceTemplate = new FreelanceTemplate();
-  window.FreelanceTemplate.init();
+  window.FT = new FreelanceTemplate();
+  window.FT.init();
 </script>
 </body>
 </html>
