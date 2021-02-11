@@ -74,7 +74,8 @@ p {
   }
 }
 
-input {
+input,
+select {
   border: solid 1px var(--grey);
   border-radius: .5rem;
   margin: 0 1rem 1rem;

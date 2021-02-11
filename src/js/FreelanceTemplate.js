@@ -2,6 +2,8 @@ import '../scss/freelancetemplate.scss';
 import Notification from "./tools/Notification";
 import InitModal from "./modal/InitModal";
 import { newQuotation, listQuotation } from './pages/Quotation';
+import { newContract } from './pages/Contract';
+
 
 class FreelanceTemplate {
 
@@ -41,6 +43,9 @@ class FreelanceTemplate {
 
     document.querySelector('#new-quotation').addEventListener('click', this._newQuotation.bind(this));
     document.querySelector('#quotation-count').addEventListener('click', this._listQuotation.bind(this));
+
+    document.querySelector('#new-contract').addEventListener('click', this._newContract.bind(this));
+
   }
 
 
@@ -65,6 +70,11 @@ class FreelanceTemplate {
     if (quotations) {
       listQuotation(quotations);
     }
+  }
+
+
+  _newContract() {
+    newContract(JSON.parse(this._ls.getItem('freelancer-info')));
   }
 
 

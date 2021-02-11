@@ -1,7 +1,7 @@
 import Modal from './Modal.js';
 
 
-class QuotationModal extends Modal {
+class NewContactModal extends Modal {
 
 
 
@@ -10,7 +10,7 @@ class QuotationModal extends Modal {
 
     this._cb = options.callback;
     this._generateButton = null;
-    this.generate = this.save.bind(this);
+    this.generate = this.generate.bind(this);
   }
 
 
@@ -33,13 +33,7 @@ class QuotationModal extends Modal {
 
   generate() {
     this._cb({
-      society: this._rootElement.querySelector('#society').value,
-      type: this._rootElement.querySelector('#type').value,
-      address: this._rootElement.querySelector('#address').value,
-      zipcode: this._rootElement.querySelector('#zipcode').value,
-      town: this._rootElement.querySelector('#town').value,
-      siret: this._rootElement.querySelector('#siret').value,
-      object: this._rootElement.querySelector('#object').value
+      type: this._rootElement.querySelector('#type').value
     });
     this.close();
   }
@@ -48,4 +42,4 @@ class QuotationModal extends Modal {
 }
 
 
-export default QuotationModal;
+export default NewContactModal;
