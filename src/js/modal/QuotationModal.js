@@ -10,7 +10,7 @@ class QuotationModal extends Modal {
 
     this._cb = options.callback;
     this._generateButton = null;
-    this.generate = this.save.bind(this);
+    this.generate = this.generate.bind(this);
   }
 
 
